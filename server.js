@@ -8,7 +8,7 @@ http.createServer( function (request, response) {
    var pathname = url.parse(request.url).pathname;
    
    // Print the name of the file for which request is made.
-   console.log("Request for " + pathname + " received.");
+   console.log("Request for:" + pathname + " received.");
    
    // Read the requested file content from file system
    fs.readFile(pathname.substr(1), function (err, data) {
@@ -31,7 +31,7 @@ http.createServer( function (request, response) {
       // Send the response body 
       response.end();
    });   
-}).listen(8081);
+}).listen(3000);
 
 // Console will print the message
-console.log('Server running at http://127.0.0.1:8081/');
+console.log('Server running at http://127.0.0.1:3000/');
